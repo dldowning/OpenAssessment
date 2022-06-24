@@ -1,0 +1,29 @@
+<!--Store this code in 'register.html' file inside the 'templates' folder-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> register </title>
+		<link rel="stylesheet" href="../static/style.css">
+	</head>
+	<body>
+		<div class="registercontent" align="center">
+			<div class="registertop">
+				<h1>Register</h1>
+			</div></br></br>
+			<div class="registerbottom">
+			<form action="{{ url_for('register')}}" method="post" autocomplete="off">
+			<div class="msg">{{ msg }}</div>
+			<!--<input type="text" name="user_id" placeholder="Enter Your UserID" class="textbox" id="user_id" required></br></br>-->
+			<input type="password" name="student_id" placeholder="Enter Your student_id" class="textbox" id="student_id" required></br></br>
+			<input type="text" name="First_Name" placeholder="Enter Your First_Name" class="textbox" id="First_Name" required></br></br>
+			<input type="text" name="Last_Name" placeholder="Enter Your Last_Name" class="textbox" id="Last_Name" required></br></br>
+			<input type="email" name="Email" placeholder="Enter Your Email ID" class="textbox" id="Email" required></br></br>
+			<input type="text" name="Degree" placeholder="Enter Your Degree" class="textbox" id="Degree" required></br></br>
+			<input type="text" name="Country" placeholder="Enter Your Country" class="textbox" id="Country" required></br></br>
+			<input type="submit" class="btn" value="Register">
+			</form>
+			<p class="worddark">Already have account? <a class="worddark" href="{{ url_for('login')}}">Login here</a></p>
+			</div>
+		</div>
+	</body>
+</html>

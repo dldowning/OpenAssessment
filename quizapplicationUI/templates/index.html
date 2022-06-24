@@ -1,0 +1,43 @@
+<!--Store this code in 'index.html' file inside the 'templates' folder-->
+
+<html lang="en">
+<head>
+    <title>index</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body bgcolor="#e6ffee">
+<div class="one">
+    <div class="two">
+        <h1>Home page</h1>
+        <ul>
+            <li class="active"><a href="{{url_for('index')}}">Index</a></li>
+            <li><a href="{{url_for('display')}}">Display</a></li>
+            <li><a href="{{url_for('update')}}">Update</a></li>
+            <li><a href="{{url_for('logout')}}">Log out</a></li>
+        </ul>
+    </div>
+    <div class="content" align="center">
+        <div class="topbar">
+            <h2>Welcome!! </h2>
+        </div>
+        </br></br>
+        <div class="contentbar">
+            <div class="msg">{{ msg }}</div>
+            <p> select any of the courses</p>
+            <p style="font-family:verdana">
+                  <SELECT name="course_number" style="font-family:verdana">
+                           <option value="5900">Special Problems </option>
+                           <option value="5210"> Machine learning </option>
+                  </SELECT>
+            </p>
+            <form action="quiz.html">
+                <button type="button">Click Me!</button>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
